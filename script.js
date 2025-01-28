@@ -2,7 +2,7 @@ function getNumbers() {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve([1, 2, 3, 4]);
-        }, 2000); 
+        }, 3000); 
     });
 }
 
@@ -15,7 +15,7 @@ getNumbers()
     .then((numbers) => {
         return new Promise((resolve) => {
             setTimeout(() => {
-                const evenNumbers = numbers.filter((num) => num % 2 === 0);
+                const evenNumbers = numbers.filter(num => num % 2 === 0);
                 updateOutput(evenNumbers.join(", "));
                 resolve(evenNumbers);
             }, 1000); 
@@ -27,7 +27,7 @@ getNumbers()
                 const multipliedNumbers = evenNumbers.map((num) => num * 2);
                 updateOutput(multipliedNumbers.join(", "));
                 resolve(multipliedNumbers);
-            }, 1000); 
+            }, 2000); 
         });
     })
     .catch((error) => {
