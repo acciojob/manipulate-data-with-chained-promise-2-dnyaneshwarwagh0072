@@ -1,4 +1,3 @@
-//your JS code here. If required.
 function getNumbers() {
     return new Promise((resolve) => {
         setTimeout(() => {
