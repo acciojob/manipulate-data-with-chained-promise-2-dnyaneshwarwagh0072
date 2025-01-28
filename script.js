@@ -2,7 +2,7 @@ function getNumbers() {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve([1, 2, 3, 4]);
-        }, 2000); // Reduced delay to 2 seconds
+        }, 2000); 
     });
 }
 
@@ -18,7 +18,7 @@ getNumbers()
                 const evenNumbers = numbers.filter((num) => num % 2 === 0);
                 updateOutput(evenNumbers.join(", "));
                 resolve(evenNumbers);
-            }, 1000); // First update after 1 second
+            }, 1000); 
         });
     })
     .then((evenNumbers) => {
@@ -27,7 +27,7 @@ getNumbers()
                 const multipliedNumbers = evenNumbers.map((num) => num * 2);
                 updateOutput(multipliedNumbers.join(", "));
                 resolve(multipliedNumbers);
-            }, 1000); // Second update after 1 second
+            }, 1000); 
         });
     })
     .catch((error) => {
